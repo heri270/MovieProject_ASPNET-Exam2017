@@ -1,55 +1,90 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using aspnet_exam_movie.Models;
 using aspnet_exam_movie.Models.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using aspnet_exam_movie.Models.Entities;
+using aspnet_exam_movie.Models.ViewModels;
 
 namespace aspnet_exam_movie.Controllers
 {
-    public class MoviesController : Controller
+    public class MovieController : Controller
     {
+        // Loosly Coupled
         private IMovieRepository _movieRepository;
-        public MoviesController(IMovieRepository movieRepository){
-            _movieRepository = movieRepository;
-            
+
+        public MovieController(IMovieRepository movieRepository)
+        {
+            this._movieRepository = movieRepository;   
         }
-        
+
+        // Read
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Index()
         {
-            var movies = _movieRepository.GetAll();
-          //  _todoList.Add(new TodoItem{TodoItemID = 1, Task = "First Task", IsComplete = false});
-            return new OkObjectResult(movies);
+            IEnumerable<Movie> movies = _movieRepository.GetAll();
+            return View(movies);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        // Create
+        [HttpGet]
+        public IActionResult Create()
         {
-            //return NotFound();
-            return new OkObjectResult(_movieRepository.Get(id));
+            return View();
         }
-
-        // POST api/values
+        //Create
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Create(Movie mo)
         {
+            if (ModelState.IsValid)
+            {
+                _movieRepository.Save(mo);
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                return View();
+            }
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        // Update
+        public IActionResult Update(int id)
         {
+            Movie movie =  _movieRepository.Get(id);
+            return View(movie);
+        }
+        [HttpPost]
+        public IActionResult Update(Movie movie)
+        {
+            if (ModelState.IsValid)
+            {
+                _movieRepository.Update(movie);
+                return RedirectToAction("Index");
+            }
+            return View(movie);
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
+        //Delete
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Movie movie =  _movieRepository.Get(id);
+            return View(movie);
+        }
+
+        [HttpPost]
         public IActionResult Delete(Movie mo)
         {
             _movieRepository.Delete(mo);
-            return NoContent();
-            
+            return RedirectToAction("Index");
         }
+
+        public IActionResult Details(int id)
+        {
+            var movie = _movieRepository.Get(id);
+            return View(movie);
+        }
+
     }
 }

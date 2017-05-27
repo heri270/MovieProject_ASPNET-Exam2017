@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace aspnet_exam_movie.Controllers
 {
-    public class HomeController : Controller
+        public class HomeController : Controller
     {
 
         MyDbContext db = new MyDbContext();
@@ -19,12 +19,6 @@ namespace aspnet_exam_movie.Controllers
             List<Movie> movies = db.Movies.ToList();
 
             ViewBag.Y = movies;
-            return View();
-        }
-
-
-        public IActionResult About()
-        {
             return View();
         }
 
