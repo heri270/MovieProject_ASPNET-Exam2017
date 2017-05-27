@@ -1,10 +1,10 @@
-using New_with_Views.Models;
-using New_with_Views.Models.Repositories;
+using aspnet_exam_movie.Models;
+using aspnet_exam_movie.Models.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace New_with_Views
+namespace aspnet_exam_movie
 {
     public class Startup
     {

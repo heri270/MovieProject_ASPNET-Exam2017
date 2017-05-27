@@ -1,7 +1,7 @@
-using New_with_Views.Models.Entities;
+using aspnet_exam_movie.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace New_with_Views.Models 
+namespace aspnet_exam_movie.Models 
 { 
     public class MyDbContext : DbContext 
     {

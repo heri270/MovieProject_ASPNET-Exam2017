@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using New_with_Views.Models;
-using New_with_Views.Models.Entities;
+using aspnet_exam_movie.Models;
+using aspnet_exam_movie.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 
-namespace New_with_Views.Controllers
+namespace aspnet_exam_movie.Controllers
 {
     public class HomeController : Controller
     {

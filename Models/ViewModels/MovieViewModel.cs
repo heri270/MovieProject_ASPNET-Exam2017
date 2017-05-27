@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using New_with_Views.Models.Entities;
+using aspnet_exam_movie.Models.Entities;
 
-namespace New_with_Views.Models.ViewModels
+namespace aspnet_exam_movie.Models.ViewModels
 {
     public class MovieViewModel
     {

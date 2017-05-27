@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using New_with_Views.Models.Repositories;
-using New_with_Views.Models.Entities;
+using aspnet_exam_movie.Models.Repositories;
+using aspnet_exam_movie.Models.Entities;
 
-namespace New_with_Views.Controllers
+namespace aspnet_exam_movie.Controllers
 {
     public class MoviesController : Controller
     {

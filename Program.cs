@@ -4,7 +4,7 @@ using  Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 
-namespace New_with_Views
+namespace aspnet_exam_movie
 {
     public class Program
     {

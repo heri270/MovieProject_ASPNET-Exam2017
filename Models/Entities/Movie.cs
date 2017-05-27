@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace New_with_Views.Models.Entities
+namespace aspnet_exam_movie.Models.Entities
 {
     public class Movie
     {

@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
-using New_with_Views.Models.Entities;
+using aspnet_exam_movie.Models.Entities;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace New_with_Views.Models 
+namespace aspnet_exam_movie.Models 
 {
     public static class DbInitializer
     {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using New_with_Views.Models.Entities;
+using aspnet_exam_movie.Models.Entities;
 
-namespace New_with_Views.Models.Repositories
+namespace aspnet_exam_movie.Models.Repositories
 {
     public interface IMovieRepository
     {
