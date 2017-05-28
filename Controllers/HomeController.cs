@@ -12,10 +12,8 @@ namespace aspnet_exam_movie.Controllers
 
         MyDbContext db = new MyDbContext();
 
-        // GET: /<controller>/
         public IActionResult Index()
         {
-            
             List<Movie> movies = db.Movies.ToList();
 
             ViewBag.Y = movies;
