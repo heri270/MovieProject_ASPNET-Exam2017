@@ -15,7 +15,6 @@ namespace aspnet_exam_movie.Controllers
         public IActionResult Index()
         {
             List<Movie> movies = db.Movies.ToList();
-
             ViewBag.Y = movies;
             return View();
         }

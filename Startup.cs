@@ -16,12 +16,12 @@ namespace aspnet_exam_movie
             servises.AddScoped<IMovieRepository, MovieRepository>();
         }
 
-       public void Configure(IApplicationBuilder app, ILoggerFactory logger, MyDbContext context) // 1. add a context parameter
+       public void Configure(IApplicationBuilder app, ILoggerFactory logger, MyDbContext context)
        {
             app.UseStaticFiles();
             logger.AddConsole();
             app.UseMvcWithDefaultRoute();
-            DbInitializer.Initialize(context); 
+            DbInitializer.Initialize(context);
        }
     }
 }
