@@ -7,11 +7,17 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-    <h1>Hello from home index.cshtml</h1>
-    <p> @foreach(var st in ViewBag.Y)
-        {
-            <p>  @st.MovieTitle   </p>
+        @{
+            ViewBag.Title = "Welcome!";
         }
-     </p>
+
+        <h2>Here you can view and edit all our movies!</h2>
+
+        <h3>Here is a list of all our current movies</h3>
+        <p> @foreach(var st in ViewBag.Y)
+            {
+                <p>  @st.MovieTitle   </p>
+            }
+        </p>
     </body>
 </html>

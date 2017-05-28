@@ -2,5 +2,51 @@
     @{
         ViewBag.Title = "Movies";
     }
-   
-      <p>test</p>
+
+<table class="table  table-striped table-hover"> 
+    <thead class="row">
+        <!--MovieTitle-->
+        <th>@Html.DisplayNameFor(model => model.MovieTitle)</th>
+        <!--YearPublished-->
+        <th>@Html.DisplayNameFor(model => model.YearPublished)</th>
+        <!--MovieLength-->
+        <th>@Html.DisplayNameFor(model => model.MovieLength)</th>
+        <!--Genre-->
+        <th>@Html.DisplayNameFor(model => model.Genre)</th>
+        <!--Director-->
+        <th>@Html.DisplayNameFor(model => model.Director)</th>
+        <!--MoviePlot-->
+        <th>@Html.DisplayNameFor(model => model.MoviePlot)</th>
+        <!--Rating-->
+        <th>@Html.DisplayNameFor(model => model.Rating)</th>
+
+    </thead>
+
+    @foreach(var st in Model)
+    { 
+        <tr>
+            <!--MovieTitle-->
+            <td>@st.MovieTitle</td> 
+            <!--YearPublished-->
+            <td>@st.YearPublished</td> 
+            <!--MovieLength-->
+            <td>@st.MovieLength</td> 
+            <!--Genre-->
+            <td>@st.Genre</td> 
+            <!--Director-->
+            <td>@st.Director</td> 
+            <!--MoviePlot-->
+            <td>@st.MoviePlot</td> 
+            <!--Rating-->
+            <td>@st.Rating</td> 
+
+            <!--Buttons-->
+            <td class="row">
+                <a class="btn btn-info" asp-controller="Movie" asp-action="Details">Details</a>
+                <a class="btn btn-primary" asp-controller="Movie" asp-action="Edit">Edit</a>
+                <a class="btn btn-danger" asp-controller="Movie" asp-action="Delete">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+<a class="btn btn-success" asp-controller="Movie" asp-action="Create">Create</a>
