@@ -1,9 +1,12 @@
-@model IEnumerable<aspnet_exam_movie.Models.Entities.Movie>
+@model aspnet_exam_movie.Models.Entities.Movie
+
     @{
-        ViewBag.Title = "Edit a Movie";
+        ViewBag.Title = "Edit: " + @Model.MovieTitle;
     }
 
 <form asp-controler="Student" asp-action="Update" method="POST" class="form-horizontal">
+    <input class="form-control" type="Hidden" asp-for="MovieItemID">
+
     @Html.Partial("_MovieForm")
 
     <div class="form-group">

@@ -1,51 +1,51 @@
-
+@model aspnet_exam_movie.Models.Entities.Movie
 
 <div class="form-group">
     <label class="col-md-2 control-label">Movie Title</label>
     <div class="col-md-4">
-        <input class="form-control">
+        <input class="form-control" asp-for="MovieTitle">
     </div>
 </div>
 
 <div class="form-group">
     <label class="col-md-2 control-label">Year Published</label>
     <div class="col-md-4">
-        <input class="form-control">
+        <input class="form-control" asp-for="YearPublished">
     </div>
 </div>
 
 <div class="form-group">
     <label class="col-md-2 control-label">Movie Length</label>
     <div class="col-md-4">
-        <input class="form-control" type="time">
+        <input class="form-control" asp-for="MovieLength" type="time">
     </div>
 </div>
 
 <div class="form-group">
     <label class="col-md-2 control-label">Genre</label>
     <div class="col-md-4">
-        <input class="form-control">
+        <input class="form-control" asp-for="Genre">
     </div>
 </div>
 
 <div class="form-group">
     <label class="col-md-2 control-label">Director</label>
     <div class="col-md-4">
-        <input class="form-control">
+        <input class="form-control" asp-for="Director">
     </div>
 </div>
 
 <div class="form-group">
     <label class="col-md-2 control-label">Movie Plot</label>
     <div class="col-md-4">
-        <textarea class="form-control"></textarea>
+        <textarea class="form-control" asp-for="MoviePlot"></textarea>
     </div>
 </div>
 
 <div class="form-group">
     <label class="col-md-2 control-label">Rating</label>
     <div class="col-md-4">
-        <input class="form-control" type="number" min="1" max="5">
+        <input class="form-control" asp-for="Rating" type="number" min="1" max="5">
     </div>
 </div>
 

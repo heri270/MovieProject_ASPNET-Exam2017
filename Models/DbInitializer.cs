@@ -19,11 +19,11 @@ namespace aspnet_exam_movie.Models
             var movies = new Movie[]
             {
                 new Movie{MovieItemID = 1, MovieTitle = "First Movie", YearPublished = 1999, Genre ="Horror",
-                    Director ="The Stupid Idiot", MovieLength = "1 hour 00 minutes", MoviePlot ="some looooooooong text", Rating = 5 },
+                    Director ="The Stupid Idiot", MovieLength = "01:55", MoviePlot ="some looooooooong text", Rating = 5 },
                 new Movie{MovieItemID = 3, MovieTitle = "Second task", YearPublished = 2017, Genre ="Fiction",
-                    Director ="The Other Stupid Idiot", MovieLength = "1 hour 55 minutes", MoviePlot ="some looooooooong text", Rating = 1 },
+                    Director ="The Other Stupid Idiot", MovieLength = "01:55", MoviePlot ="some looooooooong text", Rating = 1 },
                 new Movie{MovieItemID = 4, MovieTitle = "Third task", YearPublished = 2007, Genre ="Romance",
-                    Director ="The Stupidest Idiot", MovieLength = "3 hour 09 minutes", MoviePlot ="some looooooooong text", Rating = 3 },
+                    Director ="The Stupidest Idiot", MovieLength = "01:55", MoviePlot ="some looooooooong text", Rating = 3 },
             };
             foreach (Movie m in movies)
             {
