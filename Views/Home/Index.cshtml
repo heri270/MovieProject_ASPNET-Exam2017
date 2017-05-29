@@ -9,11 +9,10 @@
     <body>
         @{
             ViewBag.Title = "Welcome!";
+            ViewBag.Phrase = "Here you can view and edit all our movies!";
         }
 
-        <h2>Here you can view and edit all our movies!</h2>
-
-        <h3>Here is a list of all our current movies</h3>
+        <h3>Here is a list of all our current movies:</h3>
         <p> @foreach(var st in ViewBag.Y)
             {
                 <p>  @st.MovieTitle   </p>

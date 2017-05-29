@@ -1,7 +1,15 @@
 @model IEnumerable<aspnet_exam_movie.Models.Entities.Movie>
     @{
-        ViewBag.Title = "Create A New Movie";
+        ViewBag.Title = "Create a New Movie";
     }
 
-<a class="btn btn-danger" asp-controller="Movie" asp-action="Index">Cancel</a>
-<button type="submit" class="btn btn-success">Create</button>
+<form asp-controler="Movie" asp-action="Create" method="POST" class="form-horizontal">
+        @Html.Partial("_MovieForm.cshtml") 
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <a class="btn btn-danger" asp-controller="Movie" asp-action="Index">Cancel</a>
+                <button type="submit" class="btn btn-success">Create</button>
+            </div>
+        </div>
+</form>

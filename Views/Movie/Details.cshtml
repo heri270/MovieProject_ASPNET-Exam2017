@@ -1,9 +1,26 @@
 @model IEnumerable<aspnet_exam_movie.Models.Entities.Movie>
 
 @{
-    ViewBag.Title = "Details for: ";
+    ViewBag.Title = "Details for: " ;
 }
 
+<!--<div class="row">
+    <div class="col-md-4 col-md-offset-1">
+        <p><b>@Html.DisplayNameFor(model => model.MovieTitle):</b> @Model.MovieTitle</p>
+    </div>
+</div>-->
 
-<a class="btn btn-danger" asp-controller="Movie" asp-action="Delete">Delete</a>
-<a class="btn btn-success" asp-controller="Movie" asp-action="Edit">Edit</a>
+
+
+<form asp-controler="Student" asp-action="Update" method="POST" class="form-horizontal">
+    @Html.Partial("_MovieForm")
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-4">
+            <a class="btn btn-danger" asp-controller="Movie" asp-action="Index">Cancel</a>
+            <!--<a class="btn btn-danger" asp-controller="Movie" asp-action="Delete">Delete</a>-->
+            <a class="btn btn-success" asp-controller="Movie" asp-action="Update">Edit</a>
+        </div>
+    </div>
+</form>
+
