@@ -42,9 +42,9 @@
 
             <!--Buttons-->
             <td class="row">
-                <a class="btn btn-info" asp-controller="Movie" asp-action="Details">Details</a>
-                <a class="btn btn-primary" asp-controller="Movie" asp-action="Update">Edit</a>
-                <a class="btn btn-danger" asp-controller="Movie" asp-action="Delete">Delete</a>
+                <a class="btn btn-info" asp-controller="Movie" asp-action="Details" asp-route-id=@st.MovieItemID>Details</a>
+                <a class="btn btn-primary" asp-controller="Movie" asp-action="Update" asp-route-id=@st.MovieItemID>Edit</a>
+                <a class="btn btn-danger" asp-controller="Movie" asp-action="Delete" asp-route-id=@st.MovieItemID>Delete</a>
             </td>
         </tr>
     }
