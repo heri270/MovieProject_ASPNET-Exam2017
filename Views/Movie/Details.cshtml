@@ -1,15 +1,8 @@
-@model IEnumerable<aspnet_exam_movie.Models.Entities.Movie>
+@model asp_exam_movie.Models.Entities.Movie
 
 @{
-    ViewBag.Title = "Details for: " ;
+    ViewBag.Title = "Details for: " + @Model.MovieTitle;
 }
-
-<!--<div class="row">
-    <div class="col-md-4 col-md-offset-1">
-        <p><b>@Html.DisplayNameFor(model => model.MovieTitle):</b> @Model.MovieTitle</p>
-    </div>
-</div>-->
-
 
 
 <form asp-controler="Student" asp-action="Update" method="POST" class="form-horizontal">
