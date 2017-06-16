@@ -20,9 +20,9 @@ namespace aspnet_exam_movie.Models
             {
                 new Movie{MovieItemID = 1, MovieTitle = "First Movie", YearPublished = 1999, Genre ="Horror",
                     Director ="The Stupid Idiot", MovieLength = "01:55", MoviePlot ="some looooooooong text", Rating = 5 },
-                new Movie{MovieItemID = 3, MovieTitle = "Second task", YearPublished = 2017, Genre ="Fiction",
+                new Movie{MovieItemID = 3, MovieTitle = "Second Movie", YearPublished = 2017, Genre ="Fiction",
                     Director ="The Other Stupid Idiot", MovieLength = "01:55", MoviePlot ="some looooooooong text", Rating = 1 },
-                new Movie{MovieItemID = 4, MovieTitle = "Third task", YearPublished = 2007, Genre ="Romance",
+                new Movie{MovieItemID = 4, MovieTitle = "Third Movie", YearPublished = 2007, Genre ="Romance",
                     Director ="The Stupidest Idiot", MovieLength = "01:55", MoviePlot ="some looooooooong text", Rating = 3 },
             };
             foreach (Movie m in movies)
